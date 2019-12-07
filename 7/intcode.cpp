@@ -74,7 +74,7 @@ int program(std::vector<int> nums, int phase, int in, bool &done, int &i){
 
     else if (nums[i] % 10 == 3){
       // std::cin >> input;
-      if (counter == 0){
+      if (counter == 0 && phase != -1){
         input = phase;
         counter++;
       }
@@ -269,10 +269,14 @@ int main(){
   // std::cout << program(nums, 5, 0) << std::endl;
   do {
     // std::cout << program(nums, a[0], in) << std::endl;
+    output = program(nums, a[4], program(nums, a[3], program(nums, a[2], program(nums, a[1], program(nums, a[0], in, done, index), done, index), done, index), done, index), done, index);
+
     while (!done){
+
       // std::cout << program(nums, a[0], in) << std::endl;
-      output = program(nums, a[4], program(nums, a[3], program(nums, a[2], program(nums, a[1], program(nums, a[0], in, done, index), done, index), done, index), done, index), done, index);
       in = output;
+      output = program(nums, -1, program(nums, -1, program(nums, -1, program(nums, -1, program(nums, -1, in, done, index), done, index), done, index), done, index), done, index);
+      std::cout << "index: " << index << std::endl;
     }
     std::cout << "OUTPUT: " << output << std::endl;
     if (output > max){
