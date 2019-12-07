@@ -212,7 +212,7 @@ int program(std::vector<int> &nums, int phase, int in, bool &done, int &i){
     else if (nums[i] == 99){
       // std::cout << "99 END: " << nums[0] << std::endl;
       done = true;
-      return nums[0];
+      return in;
     }
     else {
       std::cout << "ERROR: UNIDENTIFIED OPCODE " << nums[i] << " i: " << i << std::endl;
@@ -265,7 +265,9 @@ int main(){
 
   int in = 0;
   int max = -2000;
+
   int output = 0;
+
   int index0 = 0;
   int index1 = 0;
   int index2 = 0;
