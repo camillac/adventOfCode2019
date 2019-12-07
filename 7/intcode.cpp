@@ -270,7 +270,12 @@ int main(){
   int in = 0;
   int max = -2000;
   int output = 0;
-  int index = 0;
+  int index0 = 0;
+  int index1 = 0;
+  int index2 = 0;
+  int index3 = 0;
+  int index4 = 0;
+
 
   int a[] = { 5, 6, 7, 8, 9 };
   int n = sizeof(a) / sizeof(a[0]);
@@ -279,14 +284,14 @@ int main(){
   // std::cout << program(nums, 5, 0) << std::endl;
   do {
     // std::cout << program(nums, a[0], in) << std::endl;
-    output = program(nums4, a[4], program(nums3, a[3], program(nums2, a[2], program(nums1, a[1], program(nums0, a[0], in, done, index), done, index), done, index), done, index), done, index);
+    output = program(nums4, a[4], program(nums3, a[3], program(nums2, a[2], program(nums1, a[1], program(nums0, a[0], in, done, index0), done, index1), done, index2), done, index3), done, index4);
 
     while (!done){
 
       // std::cout << program(nums, a[0], in) << std::endl;
       in = output;
-      output = program(nums4, -1, program(nums3, -1, program(nums2, -1, program(nums1, -1, program(nums0, -1, in, done, index), done, index), done, index), done, index), done, index);
-      std::cout << "index: " << index << std::endl;
+      output = program(nums4, -1, program(nums3, -1, program(nums2, -1, program(nums1, -1, program(nums0, -1, in, done, index0), done, index1), done, index2), done, index3), done, index4);
+      std::cout << "index: " << index0 << std::endl;
     }
     std::cout << "OUTPUT: " << output << std::endl;
     if (output > max){
