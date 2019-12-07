@@ -16,7 +16,7 @@ void print_vector(std::vector<int> nums){
   std::cout << std::endl;
 }
 
-int program(std::vector<int> nums, int phase, int in, bool &done, int &i){
+int program(std::vector<int> &nums, int phase, int in, bool &done, int &i){
 
   int input = 0;
   int counter = 0;
@@ -92,7 +92,7 @@ int program(std::vector<int> nums, int phase, int in, bool &done, int &i){
 
     else if (nums[i] % 10 == 4){
       // std::cout << "4: " << nums[nums[i+1]] << std::endl;
-      num_vals = 2;
+      i+= 2;
       return nums[nums[i+1]];
     }
 
@@ -236,12 +236,22 @@ int main(){
 
   int input;
   char comma;
-  std::vector<int> nums;
+  std::vector<int> nums0;
+  std::vector<int> nums1;
+  std::vector<int> nums2;
+  std::vector<int> nums3;
+  std::vector<int> nums4;
+
   bool done = false;
 
   while(std::cin >> input) {
     std::cin >> comma;
-    nums.push_back(input);
+    nums0.push_back(input);
+    nums1.push_back(input);
+    nums2.push_back(input);
+    nums3.push_back(input);
+    nums4.push_back(input);
+
   }
 
   // print_vector(nums);
@@ -269,13 +279,13 @@ int main(){
   // std::cout << program(nums, 5, 0) << std::endl;
   do {
     // std::cout << program(nums, a[0], in) << std::endl;
-    output = program(nums, a[4], program(nums, a[3], program(nums, a[2], program(nums, a[1], program(nums, a[0], in, done, index), done, index), done, index), done, index), done, index);
+    output = program(nums4, a[4], program(nums3, a[3], program(nums2, a[2], program(nums1, a[1], program(nums0, a[0], in, done, index), done, index), done, index), done, index), done, index);
 
     while (!done){
 
       // std::cout << program(nums, a[0], in) << std::endl;
       in = output;
-      output = program(nums, -1, program(nums, -1, program(nums, -1, program(nums, -1, program(nums, -1, in, done, index), done, index), done, index), done, index), done, index);
+      output = program(nums4, -1, program(nums3, -1, program(nums2, -1, program(nums1, -1, program(nums0, -1, in, done, index), done, index), done, index), done, index), done, index);
       std::cout << "index: " << index << std::endl;
     }
     std::cout << "OUTPUT: " << output << std::endl;
