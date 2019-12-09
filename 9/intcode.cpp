@@ -23,6 +23,7 @@ int program(std::vector<int> nums){
   int num_vals = 2;
   int param1;
   int param2;
+  int param3;
   // int param3;
 
   for (int i = 0; i < nums.size(); i += num_vals){
@@ -56,8 +57,16 @@ int program(std::vector<int> nums){
         param2 = nums[nums[i+2] + rel];
 
       }
+      if (((nums[i] % 100000) / 10000) == 0){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3];
+      }
+      else if (((nums[i] % 100000) / 10000) == 2){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3] + rel;
+      }
 
-      nums[nums[i+3]] = param1 + param2;
+      nums[param3] = param1 + param2;
       num_vals = 4;
       // std::cout << "i: " << i << std::endl;
     }
@@ -86,9 +95,17 @@ int program(std::vector<int> nums){
       else if (((nums[i] % 10000) / 1000) == 2){
         param2 = nums[nums[i+2] + rel];
       }
+      if (((nums[i] % 100000) / 10000) == 0){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3];
+      }
+      else if (((nums[i] % 100000) / 10000) == 2){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3] + rel;
+      }
 
 
-      nums[nums[i+3]] = param1 * param2;
+      nums[param3] = param1 * param2;
       num_vals = 4;
     }
 
@@ -110,6 +127,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1] + rel;
 
       }
+
 
       nums[param1] = input;
       num_vals = 2;
@@ -163,6 +181,7 @@ int program(std::vector<int> nums){
         param2 = nums[nums[i+2] + rel];
 
       }
+
 
 
       if (param1 != 0){
@@ -237,13 +256,22 @@ int program(std::vector<int> nums){
         param2 = nums[nums[i+2] + rel];
 
       }
+      if (((nums[i] % 100000) / 10000) == 0){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3];
+      }
+      else if (((nums[i] % 100000) / 10000) == 2){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3] + rel;
+      }
+
 
 
       if (param1 < param2){
-        nums[nums[i+3]] = 1;
+        nums[param3] = 1;
       }
       else {
-        nums[nums[i+3]] = 0;
+        nums[param3] = 0;
       }
       num_vals = 4;
     }
@@ -274,19 +302,28 @@ int program(std::vector<int> nums){
         param2 = nums[nums[i+2] + rel];
 
       }
+      if (((nums[i] % 100000) / 10000) == 0){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3];
+      }
+      else if (((nums[i] % 100000) / 10000) == 2){
+        // std::cout << "param 2 " << param2 << std::endl;
+        param3 = nums[i+3] + rel;
+      }
+
 
       if (param1 < param2){
-        nums[nums[i+3]] = 1;
+        nums[param3] = 1;
       }
       else {
-        nums[nums[i+3]] = 0;
+        nums[param3] = 0;
       }
 
       if (param1 == param2){
-        nums[nums[i+3]] = 1;
+        nums[param3] = 1;
       }
       else {
-        nums[nums[i+3]] = 0;
+        nums[param3] = 0;
       }
       num_vals = 4;
     }
