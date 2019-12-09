@@ -6,7 +6,7 @@
 #include <cctype>
 #include <vector>
 
-void print_vector(std::vector<int> nums){
+void print_vector(std::vector< long> nums){
   for (int i = 0; i < nums.size(); i++){
     std::cout << nums[i] << ",";
     if (i%4 == 3){
@@ -16,7 +16,7 @@ void print_vector(std::vector<int> nums){
   std::cout << std::endl;
 }
 
-int program(std::vector<int> nums){
+ long program(std::vector< long> nums){
 
   int rel = 0;
   int input = 1;
@@ -27,7 +27,7 @@ int program(std::vector<int> nums){
   // int param3;
 
   for (int i = 0; i < nums.size(); i += num_vals){
-    // std::cout << *rel << std::endl;
+    std::cout << rel << std::endl;
 
     // ----- 1 ------
 
@@ -368,16 +368,16 @@ int program(std::vector<int> nums){
 int main(){
 
 
-  int input;
+  long input;
   char comma;
-  std::vector<int> nums;
+  std::vector<long> nums;
 
   while(std::cin >> input) {
     std::cin >> comma;
     nums.push_back(input);
   }
 
-  for (int i = 0; i < 100000000; i++){
+  for (int i = 0; i < 10000000; i++){
     nums.push_back(0);
   }
 
@@ -397,6 +397,8 @@ int main(){
 
 
   program(nums);
+
+  nums.clear();
 
 
   return 0;
