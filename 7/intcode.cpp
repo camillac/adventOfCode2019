@@ -309,8 +309,6 @@ int main(){
   // std::cout << program(nums, 5, 0) << std::endl;
   do {
     in = 0;
-    output = 0;
-
     done = false;
     index0 = 0;
     index1 = 0;
