@@ -17,6 +17,7 @@ void print_vector(std::vector<int> nums){
 }
 
 int program(std::vector<int> nums, int * rel){
+  std::cout << *rel << std::endl;
 
   int input = 0;
   int num_vals = 2;
@@ -25,6 +26,7 @@ int program(std::vector<int> nums, int * rel){
   // int param3;
 
   for (int i = 0; i < nums.size(); i += num_vals){
+    // std::cout << *rel << std::endl;
 
     // ----- 1 ------
 
@@ -119,6 +121,8 @@ int program(std::vector<int> nums, int * rel){
 
       }
       std::cout << "4: " << param1 << std::endl;
+
+      num_vals = 2;
       // print_vector(nums);
       return param1;
     }
@@ -289,7 +293,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[nums[i+1]] + *rel;
       }
 
-      rel += param1;
+      *rel += param1;
 
 
       num_vals = 2;
@@ -325,7 +329,7 @@ int main(){
     nums.push_back(input);
   }
 
-  for (int i = 0; i < 10000000; i++){
+  for (int i = 0; i < 100000000; i++){
     nums.push_back(0);
   }
 
