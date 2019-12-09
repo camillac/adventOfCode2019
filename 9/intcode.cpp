@@ -16,10 +16,10 @@ void print_vector(std::vector<int> nums){
   std::cout << std::endl;
 }
 
-int program(std::vector<int> nums, int * rel){
-  std::cout << *rel << std::endl;
+int program(std::vector<int> nums){
 
-  int input = 0;
+  int rel = 0;
+  int input = 1;
   int num_vals = 2;
   int param1;
   int param2;
@@ -41,7 +41,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
       }
 
       if (((nums[i] % 10000) / 1000) == 0){
@@ -53,7 +53,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
 
       }
 
@@ -75,7 +75,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
       }
       if (((nums[i] % 10000) / 1000) == 0){
         param2 = nums[nums[i+2]];
@@ -84,7 +84,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
       }
 
 
@@ -117,7 +117,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
 
       }
       std::cout << "4: " << param1 << std::endl;
@@ -139,7 +139,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -149,7 +149,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
 
       }
 
@@ -176,7 +176,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -186,7 +186,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
 
       }
 
@@ -213,7 +213,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -223,7 +223,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
 
       }
 
@@ -250,7 +250,7 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -260,7 +260,7 @@ int program(std::vector<int> nums, int * rel){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + *rel;
+        param2 = nums[nums[i+2]] + rel;
 
       }
 
@@ -290,10 +290,10 @@ int program(std::vector<int> nums, int * rel){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + *rel;
+        param1 = nums[nums[i+1]] + rel;
       }
 
-      *rel += param1;
+      rel += param1;
 
 
       num_vals = 2;
@@ -333,6 +333,9 @@ int main(){
     nums.push_back(0);
   }
 
+  std::cout << "HI" << std::endl;
+
+
   // for (int i = 0; i < 100; i++){
   //   nums[1] = i;
   //   for (int j = 0; j < 100; j++){
@@ -344,12 +347,9 @@ int main(){
   //   }
   // }
 
-  int * rel = new int;
-  rel = 0;
 
-  program(nums, rel);
+  program(nums);
 
-  delete rel;
 
   return 0;
 }
