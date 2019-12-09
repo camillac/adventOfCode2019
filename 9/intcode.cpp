@@ -41,7 +41,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
       }
 
       if (((nums[i] % 10000) / 1000) == 0){
@@ -53,7 +53,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
 
       }
 
@@ -75,7 +75,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
       }
       if (((nums[i] % 10000) / 1000) == 0){
         param2 = nums[nums[i+2]];
@@ -84,7 +84,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
       }
 
 
@@ -100,7 +100,18 @@ int program(std::vector<int> nums){
       // std::cout << "OPCODE 3 " << nums[i] << std::endl;
 
       // std::cout << "3: INPUT " << input << std::endl;
-      nums[nums[i+1]] = input;
+      if (((nums[i] % 1000) / 100) == 0){
+        param1 = nums[i+1];
+      }
+      else if (((nums[i] % 1000) / 100) == 1){
+        param1 = i+1;
+      }
+      else if (((nums[i] % 1000) / 100) == 2){
+        param1 = nums[i+1] + rel;
+
+      }
+
+      nums[param1] = input;
       num_vals = 2;
 
     }
@@ -117,7 +128,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
 
       }
       std::cout << "4: " << param1 << std::endl;
@@ -139,7 +150,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -149,7 +160,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
 
       }
 
@@ -176,7 +187,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -186,7 +197,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
 
       }
 
@@ -213,7 +224,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -223,7 +234,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
 
       }
 
@@ -250,7 +261,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
 
       }
       if (((nums[i] % 10000) / 1000) == 0){
@@ -260,7 +271,7 @@ int program(std::vector<int> nums){
         param2 = nums[i+2];
       }
       else if (((nums[i] % 10000) / 1000) == 2){
-        param2 = nums[nums[i+2]] + rel;
+        param2 = nums[nums[i+2] + rel];
 
       }
 
@@ -290,7 +301,7 @@ int program(std::vector<int> nums){
         param1 = nums[i+1];
       }
       else if (((nums[i] % 1000) / 100) == 2){
-        param1 = nums[nums[i+1]] + rel;
+        param1 = nums[nums[i+1] + rel];
       }
 
       rel += param1;
